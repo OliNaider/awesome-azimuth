@@ -1,30 +1,95 @@
 <html>
   <head>
-    <title>Mi primera web</title>
+    <title>Mi página</title>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      header {
+        background-color: #333;
+        color: white;
+        padding: 15px;
+        text-align: center;
+      }
+
+      nav {
+        background-color: #555;
+        padding: 10px;
+        text-align: center;
+      }
+
+      nav a {
+        color: white;
+        margin: 10px;
+        text-decoration: none;
+      }
+
+      section {
+        padding: 20px;
+        border-bottom: 1px solid #ccc;
+      }
+
+      button {
+        padding: 10px;
+        font-size: 16px;
+      }
+
+      /* RESPONSIVE */
+      @media (max-width: 600px) {
+        body {
+          background-color: #f0f8ff;
+        }
+
+        nav {
+          display: flex;
+          flex-direction: column;
+        }
+
+        nav a {
+          margin: 5px 0;
+        }
+      }
+    </style>
   </head>
+
   <body>
-    <h1>Hola 😎</h1>
+    <header>
+      <h1>Mi página web 😎</h1>
+    </header>
 
-    <section>
+    <nav>
+      <a href="#sobre">Sobre mí</a>
+      <a href="#proyectos">Proyectos</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+
+    <!-- SECCIÓN 1 -->
+    <section id="sobre">
       <h2>Sobre mí</h2>
-      <p>Soy estudiante y estoy aprendiendo Astro</p>
+      <p>Soy estudiante y estoy aprendiendo Astro.</p>
     </section>
 
-    <section>
+    <!-- SECCIÓN 2 -->
+    <section id="proyectos">
       <h2>Proyectos</h2>
-      <p>Acá voy a mostrar mis proyectos</p>
+      <p>Acá voy a mostrar mis proyectos.</p>
     </section>
 
-    <section>
+    <!-- SECCIÓN 3 -->
+    <section id="contacto">
       <h2>Contacto</h2>
       <p>Email: ejemplo@gmail.com</p>
+
+      <button onclick="mostrarMensaje()">Saludar</button>
     </section>
 
-    <button onclick="saludar()">Click</button>
-
     <script>
-      function saludar() {
-        alert("Hola!");
+      function mostrarMensaje() {
+        alert("¡Gracias por visitar mi página!");
       }
     </script>
   </body>
