@@ -1,11 +1,31 @@
----
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
+<html>
+  <head>
+    <title>Mi primera web</title>
+  </head>
+  <body>
+    <h1>Hola 😎</h1>
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
----
+    <section>
+      <h2>Sobre mí</h2>
+      <p>Soy estudiante y estoy aprendiendo Astro</p>
+    </section>
 
-<Layout>
-	<Welcome />
-</Layout>
+    <section>
+      <h2>Proyectos</h2>
+      <p>Acá voy a mostrar mis proyectos</p>
+    </section>
+
+    <section>
+      <h2>Contacto</h2>
+      <p>Email: ejemplo@gmail.com</p>
+    </section>
+
+    <button onclick="saludar()">Click</button>
+
+    <script>
+      function saludar() {
+        alert("Hola!");
+      }
+    </script>
+  </body>
+</html>
